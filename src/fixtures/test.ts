@@ -10,12 +10,14 @@ import { LoginPage } from "../pages/LoginPage";
 import { ShopPage } from "../pages/ShopPage";
 import { CartPage } from "../pages/CartPage";
 import { DashboardPage } from "../pages/DashboardPage";
+import { LandingPage } from "../pages/LandingPage";
 
 type Fixtures = {
   loginPage: LoginPage;
   shopPage: ShopPage;
   cartPage: CartPage;
   dashboardPage: DashboardPage;
+  landingPage: LandingPage;
 };
 
 // This section extends the base test with our custom fixtures. Each 
@@ -38,6 +40,10 @@ export const test = base.extend<Fixtures>({
   dashboardPage: async ({ page }, use) => {
     await use(new DashboardPage(page));
   },
+  landingPage: async ({ page }, use) => {
+    await use(new LandingPage(page));
+  },
+
 });
 
 export { expect };

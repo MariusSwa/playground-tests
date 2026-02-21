@@ -14,6 +14,7 @@ import { routes } from "../utils/routes";
 // in our tests.
 export class LoginPage {
   readonly page: Page;
+  
   readonly email: Locator;
   readonly password: Locator;
   readonly submit: Locator;
